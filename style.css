@@ -1,0 +1,355 @@
+@import url(https://fonts.google.com/specimen/Barlow+Semi+Condensed);
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #edf2f8;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  height: auto;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.post-1 h2::after,
+.post-2 h2::after,
+.post-3 h2::after,
+.post-4 h2::after,
+.post-5 h2::after {
+  content: "Verified Graduate";
+  display: block;
+  font-size: 12px;
+  font-weight: 100;
+  letter-spacing: 1px;
+}
+.post-1 h2::after,
+.post-2 h2::after,
+.post-5 h2::after {
+  color: rgb(255, 255, 255, 0.5);
+}
+.post-3 h2::after,
+.post-4 h2::after {
+  color: rgb(1, 1, 1, 0.5);
+}
+.grid {
+  display: grid;
+  grid-template-columns: minmax(375px, 1fr), repeat(10, 1fr);
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "post-1 post-1 post-1 post-1 post-1 post-2 post-2 post-3 post-3 post-3"
+    "post-3 post-3 post-4 post-4 post-4 post-4 post-4 post-4 post-5 post-5";
+  gap: 4% 2%;
+}
+
+.author {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.name {
+  margin-left: 2.5%;
+  font-size: 11px;
+}
+.image-daniel,
+.image-jonathan,
+.image-kira,
+.image-jeanette,
+.image-patrick {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  outline: 2px white solid;
+  padding: 1px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: center;
+}
+.title,
+.details {
+  padding-left: 1%;
+  font-size: 13px;
+  color: white;
+}
+
+.title-1,
+.title-5 {
+  padding: 1.5%;
+  color: white;
+}
+.details-1,
+.details-5 {
+  color: rgb(255, 255, 255, 0.5);
+}
+.title-2 {
+  color: white;
+}
+.details-2 {
+  color: rgb(255, 255, 255, 0.5);
+}
+.title-2,
+.details-2 {
+  padding: 8% 0% 0% 4%;
+}
+.title-3,
+.details-3 {
+  padding-top: 4%;
+  margin-left: 4%;
+  margin-top: 1%;
+}
+.title-4,
+.details-4 {
+  padding: 3% 0% 0% 6%;
+}
+.details-3,
+.details-4 {
+  color: rgb(1, 1, 1, 0.5);
+}
+
+.title-1,
+.title-2,
+.title-3,
+.title-4,
+.title-5 {
+  font-weight: 600;
+  word-spacing: 0px;
+}
+.details-1,
+.details-2,
+.details-3,
+.details-4,
+.details-5 {
+  font-weight: 500;
+}
+
+.post-1,
+.post-2,
+.post-3,
+.post-4,
+.post-5 {
+  margin-top: 3%;
+  font-size: 15px;
+  word-spacing: 0.2rem;
+  margin-top: 0;
+}
+
+.post-1 {
+  padding: 3%;
+  grid-area: "post-1";
+  background-color: hsl(263, 55%, 52%);
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border-radius: 8px;
+  position: relative;
+}
+.post-1::after {
+  content: "،،";
+  font-size: 300px;
+  position: absolute;
+  top: -220px;
+  left: 65%;
+  letter-spacing: -50px;
+  color: rgb(255, 255, 255, 0.5);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.post-2 {
+  grid-area: "post-2";
+  padding: 3%;
+  background-color: #49556b;
+  grid-column-start: 5;
+  grid-column-end: 8;
+  border-radius: 8px;
+}
+.post-3 {
+  grid-area: "post-3";
+  background-color: white;
+  padding: 3%;
+  font-size: 13px;
+  grid-column-start: 8;
+  grid-column-end: 11;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  border-radius: 8px;
+  line-height: 20px;
+}
+.post-4 {
+  grid-area: "post-4";
+  background-color: white;
+  padding: 3%;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  border-radius: 8px;
+}
+.post-5 {
+  grid-area: "post-5";
+  background-color: #18202d;
+  padding: 3%;
+  grid-column-start: 3;
+  grid-column-end: 8;
+  grid-row-start: 2;
+  grid-row-end: 2;
+  border-radius: 8px;
+}
+
+/* Extra small devices (portrait phones, less than 576px)*/
+@media (max-width: 767px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 375px;
+    height: auto;
+    position: relative;
+    margin: 20px auto;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .container {
+    width: 96%;
+    height: auto;
+    margin-top: 70px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 70px;
+  }
+
+  .post-1,
+  .post-2,
+  .post-3,
+  .post-4,
+  .post-5 {
+    margin-top: 8%;
+    font-size: large;
+    word-spacing: 0.3rem;
+    width: 90%;
+    margin-left: 5%;
+    padding: 25px;
+  }
+  .post-1 {
+    margin-top: 0px;
+  }
+  .post-3 {
+    order: 1;
+  }
+  .title-1,
+  .title-2,
+  .title-3,
+  .title-4,
+  .title-5 {
+    padding-top: 5px;
+  }
+  .details-1,
+  .details-2,
+  .details-3,
+  .details-4,
+  .details-5 {
+    padding-top: 10px;
+  }
+  .post-1::after {
+    font-size: 430px;
+    top: -315px;
+    left: 40%;
+    letter-spacing: -80px;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) and (max-width: 966px) {
+  .grid {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 675px;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    position: relative;
+    margin: 20px auto;
+  }
+  .container {
+    width: 96%;
+    height: auto;
+    margin-top: 50px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .post-1,
+  .post-2,
+  .post-3,
+  .post-4,
+  .post-5 {
+    margin-top: 3%;
+    padding-top: 0;
+  }
+  .details-1,
+  .details-2,
+  .details-3,
+  .details-4,
+  .details-5 {
+    padding-top: 0;
+  }
+  .title-1,
+  .title-2,
+  .title-3,
+  .title-4,
+  .title-5 {
+    padding-top: 5px;
+  }
+  .post-3 {
+    order: 1;
+  }
+  .br {
+    display: none;
+  }
+  .post-1 br,
+  .post-2 br,
+  .post-3 br,
+  .post-4 br,
+  .post-5 br {
+    display: none;
+  }
+  .post-1::after {
+    font-size: 250px;
+    top: -185px;
+  }
+}
+@media (min-width: 967px) and (max-width: 1200px) {
+  .container {
+    width: 950px;
+  }
+  .grid {
+    grid-template-rows: 45% 45%;
+    gap: 2.5%;
+    margin-top: 7%;
+  }
+  .post-3 {
+    line-height: 15px;
+  }
+  .post-1,
+  .post-2,
+  .post-4,
+  .post-5 {
+    line-height: 22px;
+    font-size: 12px;
+    padding-top: 0;
+  }
+  .post-1::after {
+    top: -50px;
+  }
+}
