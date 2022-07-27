@@ -2,6 +2,8 @@
 
 ![Design preview for the Testimonials grid section coding challenge](./design/desktop-preview.jpg)
 
+### You can check out [HEAR](https://hassan-jaber.github.io/testimonials-grid-section/)
+
 ## Welcome! 👋
 
 Thanks for checking out this front-end coding challenge.
